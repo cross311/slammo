@@ -2,3 +2,5 @@
 
 homeCtrl = ($scope) ->
   $scope.home = "Hello"
+
+@slammo.controller 'HomeCtrl', ['$scope', homeCtrl]
