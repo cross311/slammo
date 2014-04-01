@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require ./angular-1.2.7/angular
 //= require ./angular-1.2.7/angular-route
 //= require ./angular-1.2.7/angular-resource
