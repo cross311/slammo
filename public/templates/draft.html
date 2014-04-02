@@ -1,9 +1,116 @@
 <style>
+  .draft-header {
+  	margin: 0 auto;
+  	text-align: center;
+  	padding-top: 20px;
+  	border: 1px solid black;
+  	width: 200px;
+  	height: 100px;
+  }
+  .count-team-name {
+  	padding-left:15px;
+  	font-weight: bold;
+  }
 </style>
 
-<header>
-</header>
 
-<div>
-  <p>{{ draft }}</p>
+<div class="draft-content container">
+<div class="row">
+  <div class="jumbotron col-md-12">
+  	<h1>Create Your Team</h1>
+  	<h3>You have <span class="badge">20</span> skates left to draft!</h3>
+  	<p>The remaining skaters you can draft need to be at least 5 from each home team:</p>
+  	<div class="col-md-6">
+  	<a href="#/draft#bronx">
+  	  <span class="badge pull-left">0/5</span>
+  	  <span class="count-team-name">Bronx</span>
+  	  </a>
+  	</div>
+  	<div class="col-md-6">
+  	<a href="#/draft#brooklyn">
+  	  <span class="badge pull-left">0/5</span>
+  	  <span class="count-team-name">Brooklyn</span>
+  	  </a>
+  	</div>
+  	<div class="col-md-6">
+  	<a href="#/draft#manhattan">
+  	  <span class="badge pull-left">0/5</span>
+  	  <span class="count-team-name">Manhattan</span>
+  	  </a>
+  	</div>
+  	<div class="col-md-6">
+  	<a href="#/draft#queens">
+  	  <span class="badge alert-success pull-left">5/5</span>
+  	  <span class="count-team-name">Queens</span>
+  	  </a>
+  	</div>
+  </div>
+</div>
+  <div class="teams row">
+    <div class="input-group col-md-12">
+      <ul class="list-group" id="bronx">
+        <li class="list-group-item list-group-item-info">
+          <span class="badge">0/5</span>
+          <h4>Bronx</h4>
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox">
+          Player 1
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox">
+          Player 5
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox">
+          Player 6
+        </li>
+      </ul>
+
+      <ul class="list-group" id="brooklyn">
+        <li class="list-group-item list-group-item-info">
+          <span class="badge">0/5</span>
+          <h4>Brooklyn</h4>
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox">
+          Player 2
+        </li>
+      </ul>
+
+      <ul class="list-group" id="manhattan">
+        <li class="list-group-item list-group-item-info">
+          <span class="badge">0/5</span>
+          <h4>Manhattan</h4>
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox">
+          Player 3
+        </li>
+      </ul>
+
+      <ul class="list-group" id="queens">
+        <li class="list-group-item list-group-item-success">
+          <span class="badge">5/5</span>
+          <h4>Queens</h4>
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" checked>
+          Player 4
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" checked>
+          Player 7
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" checked>
+          Player 8
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" checked>
+          Player 9
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
