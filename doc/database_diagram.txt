@@ -23,10 +23,14 @@ Bouts
 -----
 BoutId
 ExternalBoutId
-Team1Id
-Team2Id
 DateTimeOfBout
 DateTimeToCloseRoosters
+
+
+BoutsTeams
+----------
+BoutId
+TeamId
 
 
 SkaterBoutScores

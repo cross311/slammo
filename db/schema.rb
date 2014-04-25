@@ -24,14 +24,24 @@ ActiveRecord::Schema.define(version: 20140425113138) do
     t.datetime "updated_at"
   end
 
+  create_table "bouts_teams", id: false, force: true do |t|
+    t.integer "bout_id"
+    t.integer "team_id"
+  end
+
   create_table "fantasy_bout_roostered_skaters", force: true do |t|
     t.string   "position"
+    t.integer  "skater_id"
+    t.integer  "bout_id"
+    t.integer  "fantasy_manager_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "fantasy_bout_scores", force: true do |t|
     t.integer  "score"
+    t.integer  "fantasy_manager_id"
+    t.integer  "bout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,12 +55,16 @@ ActiveRecord::Schema.define(version: 20140425113138) do
   end
 
   create_table "fantasy_team_skaters", force: true do |t|
+    t.integer  "skater_id"
+    t.integer  "fantasy_manager_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "skater_bout_scores", force: true do |t|
     t.integer  "jammer_points_scored"
+    t.integer  "skater_id"
+    t.integer  "bout_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -59,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140425113138) do
     t.string   "external_id"
     t.string   "derby_name"
     t.string   "number"
+    t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

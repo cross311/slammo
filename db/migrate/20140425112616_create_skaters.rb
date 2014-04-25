@@ -4,6 +4,7 @@ class CreateSkaters < ActiveRecord::Migration
       t.string :external_id
       t.string :derby_name
       t.string :number
+      t.belongs_to :team
 
       t.timestamps
     end

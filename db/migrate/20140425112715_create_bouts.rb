@@ -7,5 +7,10 @@ class CreateBouts < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    create_table :bouts_teams, id:false do |t|
+      t.belongs_to :bout
+      t.belongs_to :team
+    end
   end
 end
