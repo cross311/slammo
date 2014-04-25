@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  external_id: MyString
+  bout_start: 2014-04-25 07:27:15
+  rooster_close: 2014-04-25 07:27:15
+
+two:
+  external_id: MyString
+  bout_start: 2014-04-25 07:27:15
+  rooster_close: 2014-04-25 07:27:15

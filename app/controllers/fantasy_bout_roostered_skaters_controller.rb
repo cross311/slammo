@@ -1,0 +1,2 @@
+class FantasyBoutRoosteredSkatersController < ApplicationController
+end

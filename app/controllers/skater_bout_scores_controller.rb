@@ -1,0 +1,2 @@
+class SkaterBoutScoresController < ApplicationController
+end

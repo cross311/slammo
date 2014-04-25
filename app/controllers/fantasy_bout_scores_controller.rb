@@ -1,0 +1,2 @@
+class FantasyBoutScoresController < ApplicationController
+end

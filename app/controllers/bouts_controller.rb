@@ -1,0 +1,2 @@
+class BoutsController < ApplicationController
+end

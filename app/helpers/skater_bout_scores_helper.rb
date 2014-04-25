@@ -1,0 +1,2 @@
+module SkaterBoutScoresHelper
+end
