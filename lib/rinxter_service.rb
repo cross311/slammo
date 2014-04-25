@@ -3,8 +3,24 @@ require 'faraday'
 module RinxterService
   extend self
 
-  def list_bouts
-    get_data('type=boutList&leagueId=7&season=2012')
+  def list_bouts(leagueId, season) 
+    get('boutList',{'leagueId' => leagueId, 'season' => season})
+  end
+  
+  def list_leagues 
+    get('leaguelist')
+  end
+  
+  def league(leagueId)
+    get('league',{'leagueId' => leagueId})
+  end
+  
+  def team(teamId)
+    get('league',{'teamId' => teamId})
+  end
+  
+  def list_teams(leagueId)
+    get('teamList',{'leagueId' => leagueId})
   end
   
   private
@@ -13,6 +29,14 @@ module RinxterService
 
   def connection
     @connection ||= Faraday.new(:url => RINXTER_BASE)
+  end
+  
+  def get(type, parameterHash = {})
+    parameterHash[:output] = 'obj'
+    route = "type=#{type}"
+    parameterHash.each{|key,value| route = "#{route}&#{key}=#{value}"}
+    puts route
+    get_data(route)
   end
 
   def get_data(route)
