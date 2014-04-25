@@ -30,7 +30,7 @@ DateTimeToCloseRoosters
 BoutsTeams
 ----------
 BoutId
-TeamId
+TeamId  
 
 
 SkaterBoutScores
